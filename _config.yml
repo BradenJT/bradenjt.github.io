@@ -1,5 +1,61 @@
 remote_theme: pages-themes/minimal@v0.2.0
-title: BradenJT's homepage
-description: Bookmark this to keep an eye on my project updates!
+
+title: Braden Townsell
+description: Systems thinking, architectural decisions, and the craft of software.
+url: "https://bradenjt.github.io"
+
+author:
+  name: Braden Townsell
+  email: bradenjparrish@gmail.com
+
+collections:
+  adrs:
+    output: true
+    permalink: /adrs/:name/
+  system_design:
+    output: true
+    permalink: /system-design/:name/
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: adrs
+    values:
+      layout: adr
+  - scope:
+      path: ""
+      type: system_design
+    values:
+      layout: system-design
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+permalink: /blog/:year/:month/:day/:title/
+
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-remote-theme
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - docs/
+  - vendor/
+  - README.md
