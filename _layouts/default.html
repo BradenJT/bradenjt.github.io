@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    {% feed_meta %}
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <style>
+      nav ul { list-style: none; padding: 0; margin: 0 0 1rem 0; }
+      nav ul li { display: inline-block; margin-right: 0.75rem; }
+      .content-meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+      .adr-status {
+        display: inline-block;
+        padding: 0.1rem 0.5rem;
+        border-radius: 3px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .adr-status--accepted { background: #d4edda; color: #155724; }
+      .adr-status--proposed { background: #fff3cd; color: #856404; }
+      .adr-status--deprecated { background: #f8d7da; color: #721c24; }
+      .adr-status--superseded { background: #e2e3e5; color: #383d41; }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ '/' | relative_url }}" style="color: inherit; text-decoration: none;">{{ site.title }}</a></h1>
+        <p>{{ site.description }}</p>
+        <nav>
+          <ul>
+            <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/adrs' | relative_url }}">ADRs</a></li>
+            <li><a href="{{ '/system-design' | relative_url }}">System Design</a></li>
+            <li><a href="{{ '/notes' | relative_url }}">Notes</a></li>
+            <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+            <li><a href="{{ '/consulting' | relative_url }}">Consulting</a></li>
+            <li><a href="{{ '/about' | relative_url }}">About</a></li>
+            <li><a href="{{ '/now' | relative_url }}">Now</a></li>
+          </ul>
+        </nav>
+      </header>
+      <section>
+        {{ content }}
+      </section>
+      <footer>
+        <p>{{ site.author.name }}</p>
+      </footer>
+    </div>
+  </body>
+</html>
