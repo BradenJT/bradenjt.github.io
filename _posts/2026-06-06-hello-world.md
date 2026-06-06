@@ -1,4 +1,5 @@
 ---
+layout: post
 title: "Starting a Technical Blog"
 date: 2026-06-06
 ---

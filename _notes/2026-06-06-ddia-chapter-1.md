@@ -1,4 +1,5 @@
 ---
+layout: note
 title: "DDIA Chapter 1 — Reliable, Scalable, and Maintainable Applications"
 date: 2026-06-06
 source: "Designing Data-Intensive Applications — Kleppmann"

@@ -1,4 +1,5 @@
 ---
+layout: system-design
 title: "Design a URL Shortener"
 date: 2026-06-06
 ---

@@ -1,4 +1,5 @@
 ---
+layout: adr
 title: "ADR 0001: Use Jekyll for the Technical Blog"
 date: 2026-06-06
 status: Accepted
