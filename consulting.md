@@ -19,4 +19,4 @@ Advisory and architecture services for engineering teams that need a trusted tec
 
 ### Engagement
 
-[bradenjparrish@gmail.com](mailto:bradenjparrish@gmail.com)
+[me@bradentownsell.com](mailto:me@bradentownsell.com)
