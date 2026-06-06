@@ -1,0 +1,14 @@
+---
+layout: default
+title: System Design
+---
+<h1>System Design</h1>
+<p>Structured write-ups of system design problems: requirements, architecture, trade-offs.</p>
+<ul>
+  {% for item in site.system_design %}
+    <li>
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      <span class="content-meta"> — {{ item.date | date: "%B %-d, %Y" }}</span>
+    </li>
+  {% endfor %}
+</ul>

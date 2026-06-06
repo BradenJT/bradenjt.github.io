@@ -1,0 +1,15 @@
+---
+layout: default
+title: ADRs
+---
+<h1>Architecture Decision Records</h1>
+<p>A log of significant architectural decisions made in projects I've worked on or studied.</p>
+<ul>
+  {% assign sorted_adrs = site.adrs | sort: "path" %}
+  {% for adr in sorted_adrs %}
+    <li>
+      <a href="{{ adr.url | relative_url }}">{{ adr.title }}</a>
+      <span class="content-meta"> — {{ adr.date | date: "%Y-%m-%d" }} · {{ adr.status }}</span>
+    </li>
+  {% endfor %}
+</ul>

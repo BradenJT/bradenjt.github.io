@@ -1,0 +1,14 @@
+---
+layout: default
+title: Notes
+---
+<h1>Notes</h1>
+<p>Book notes and study summaries. Lower polish bar — the goal is externalizing understanding.</p>
+<ul>
+  {% for note in site.notes %}
+    <li>
+      <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+      <span class="content-meta"> — {{ note.date | date: "%B %-d, %Y" }}</span>
+    </li>
+  {% endfor %}
+</ul>
