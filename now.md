@@ -3,15 +3,15 @@ layout: page
 title: Now
 ---
 
-*Last updated: June 2026*
+_Last updated: June 6 2026_
 
 ## Reading
 
-- *Designing Data-Intensive Applications* — Martin Kleppmann (primary text, reading with notes)
+- _Designing Data-Intensive Applications_ — Martin Kleppmann (primary text, reading with notes)
 
 ## Building
 
-- This site — documenting the setup and first ADR in parallel.
+- ADRs for upcoming project and to practice architectural thinking — view them [HERE](https://bradenjt.github.io/adrs/) and feel free to give feedback!
 
 ## Learning
 
@@ -20,4 +20,4 @@ title: Now
 
 ---
 
-*A [now page](https://nownownow.com/about) is a snapshot of what someone is focused on at this point in their life.*
+_A [now page](https://nownownow.com/about) is a snapshot of what someone is focused on at this point in their life._
