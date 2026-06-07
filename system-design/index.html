@@ -2,13 +2,15 @@
 layout: default
 title: System Design
 ---
-<h1>System Design</h1>
-<p>Structured write-ups of system design problems: requirements, architecture, trade-offs.</p>
-<ul>
+<div class="index-header">
+  <h1 class="index-title">System Design</h1>
+  <p class="index-desc">Structured write-ups of system design problems: requirements, architecture, trade-offs.</p>
+</div>
+<ul class="post-list">
   {% for item in site.system_design %}
-    <li>
+    <li class="post-list-item">
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-      <span class="content-meta"> — {{ item.date | date: "%B %-d, %Y" }}</span>
+      <span class="post-list-meta">{{ item.date | date: "%B %d, %Y" }}</span>
     </li>
   {% endfor %}
 </ul>

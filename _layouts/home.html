@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<div class="hero">
+  <h1 class="hero-name">{{ site.title }}</h1>
+  <p class="hero-desc">{{ site.description }}</p>
+</div>
+
+<section class="home-section">
+  <h2 class="section-label">Writing</h2>
+  <div class="link-grid">
+    <a href="{{ '/blog/' | relative_url }}" class="link-card">
+      <span class="link-card-title">Blog</span>
+      <span class="link-card-desc">Technical posts, opinions, and lessons learned.</span>
+    </a>
+    <a href="{{ '/adrs/' | relative_url }}" class="link-card">
+      <span class="link-card-title">ADRs</span>
+      <span class="link-card-desc">Architecture Decision Records from real and studied decisions.</span>
+    </a>
+    <a href="{{ '/system-design/' | relative_url }}" class="link-card">
+      <span class="link-card-title">System Design</span>
+      <span class="link-card-desc">Structured write-ups of system design problems.</span>
+    </a>
+    <a href="{{ '/notes/' | relative_url }}" class="link-card">
+      <span class="link-card-title">Notes</span>
+      <span class="link-card-desc">Book notes and study summaries.</span>
+    </a>
+  </div>
+</section>
+
+<section class="home-section">
+  <h2 class="section-label">More</h2>
+  <div class="link-list">
+    <a href="{{ '/projects/' | relative_url }}" class="link-item">
+      <span class="link-item-name">Projects</span>
+      <span class="link-item-desc">A portfolio of work with documented decisions.</span>
+    </a>
+    <a href="{{ '/consulting/' | relative_url }}" class="link-item">
+      <span class="link-item-name">Consulting</span>
+      <span class="link-item-desc">Advisory and architecture services via BTC.</span>
+    </a>
+    <a href="{{ '/about/' | relative_url }}" class="link-item">
+      <span class="link-item-name">About</span>
+      <span class="link-item-desc">Who I am and where I'm headed.</span>
+    </a>
+    <a href="{{ '/now/' | relative_url }}" class="link-item">
+      <span class="link-item-name">Now</span>
+      <span class="link-item-desc">What I'm currently reading, building, and learning.</span>
+    </a>
+  </div>
+</section>

@@ -2,13 +2,15 @@
 layout: default
 title: Notes
 ---
-<h1>Notes</h1>
-<p>Book notes and study summaries. Lower polish bar — the goal is externalizing understanding.</p>
-<ul>
+<div class="index-header">
+  <h1 class="index-title">Notes</h1>
+  <p class="index-desc">Book notes and study summaries. Lower polish bar — the goal is externalizing understanding.</p>
+</div>
+<ul class="post-list">
   {% for note in site.notes %}
-    <li>
+    <li class="post-list-item">
       <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
-      <span class="content-meta"> — {{ note.date | date: "%B %-d, %Y" }}</span>
+      <span class="post-list-meta">{{ note.date | date: "%B %d, %Y" }}</span>
     </li>
   {% endfor %}
 </ul>

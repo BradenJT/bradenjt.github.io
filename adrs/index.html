@@ -2,14 +2,19 @@
 layout: default
 title: ADRs
 ---
-<h1>Architecture Decision Records</h1>
-<p>A log of significant architectural decisions made in projects I've worked on or studied.</p>
-<ul>
+<div class="index-header">
+  <h1 class="index-title">Architecture Decision Records</h1>
+  <p class="index-desc">A log of significant architectural decisions made in projects I've worked on or studied.</p>
+</div>
+<ul class="post-list">
   {% assign sorted_adrs = site.adrs | sort: "title" %}
   {% for adr in sorted_adrs %}
-    <li>
+    <li class="post-list-item">
       <a href="{{ adr.url | relative_url }}">{{ adr.title }}</a>
-      <span class="content-meta"> — {{ adr.date | date: "%Y-%m-%d" }} · {{ adr.status }}</span>
+      <span class="post-list-meta">
+        {{ adr.date | date: "%Y-%m-%d" }}
+        <span class="adr-status adr-status--{{ adr.status | downcase }}">{{ adr.status }}</span>
+      </span>
     </li>
   {% endfor %}
 </ul>

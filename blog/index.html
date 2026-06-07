@@ -2,12 +2,15 @@
 layout: default
 title: Blog
 ---
-<h1>Blog</h1>
-<ul>
+<div class="index-header">
+  <h1 class="index-title">Blog</h1>
+  <p class="index-desc">Technical posts, opinions, and lessons learned.</p>
+</div>
+<ul class="post-list">
   {% for post in site.posts %}
-    <li>
+    <li class="post-list-item">
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      <span class="content-meta"> — {{ post.date | date: "%B %d, %Y" }}</span>
+      <span class="post-list-meta">{{ post.date | date: "%B %d, %Y" }}</span>
     </li>
   {% endfor %}
 </ul>

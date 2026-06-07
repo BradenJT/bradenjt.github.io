@@ -6,49 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% seo %}
     {% feed_meta %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-    <style>
-      nav ul { list-style: none; padding: 0; margin: 0 0 1rem 0; }
-      nav ul li { display: inline-block; margin-right: 0.75rem; }
-      .content-meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
-      .adr-status {
-        display: inline-block;
-        padding: 0.1rem 0.5rem;
-        border-radius: 3px;
-        font-size: 0.8rem;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-      .adr-status--accepted { background: #d4edda; color: #155724; }
-      .adr-status--proposed { background: #fff3cd; color: #856404; }
-      .adr-status--deprecated { background: #f8d7da; color: #721c24; }
-      .adr-status--superseded { background: #e2e3e5; color: #383d41; }
-    </style>
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ '/' | relative_url }}" style="color: inherit; text-decoration: none;">{{ site.title }}</a></h1>
-        <p>{{ site.description }}</p>
-        <nav>
-          <ul>
-            <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
-            <li><a href="{{ '/adrs' | relative_url }}">ADRs</a></li>
-            <li><a href="{{ '/system-design' | relative_url }}">System Design</a></li>
-            <li><a href="{{ '/notes' | relative_url }}">Notes</a></li>
-            <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
-            <li><a href="{{ '/consulting' | relative_url }}">Consulting</a></li>
-            <li><a href="{{ '/about' | relative_url }}">About</a></li>
-            <li><a href="{{ '/now' | relative_url }}">Now</a></li>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+            <li><a href="{{ '/adrs/' | relative_url }}">ADRs</a></li>
+            <li><a href="{{ '/system-design/' | relative_url }}">System Design</a></li>
+            <li><a href="{{ '/notes/' | relative_url }}">Notes</a></li>
+            <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+            <li><a href="{{ '/consulting/' | relative_url }}">Consulting</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+            <li><a href="{{ '/now/' | relative_url }}">Now</a></li>
           </ul>
         </nav>
-      </header>
-      <section>
+      </div>
+    </header>
+    <main class="site-main">
+      <div class="content-wrapper">
         {{ content }}
-      </section>
-      <footer>
-        <p>{{ site.author.name }}</p>
-      </footer>
-    </div>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span>{{ site.author.name }}</span>
+        <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+      </div>
+    </footer>
+    <script>
+      (function() {
+        var path = window.location.pathname;
+        document.querySelectorAll('.nav-links a').forEach(function(a) {
+          var href = a.getAttribute('href');
+          if (href !== '/' && path.startsWith(href)) {
+            a.classList.add('active');
+          }
+        });
+      })();
+    </script>
   </body>
 </html>
