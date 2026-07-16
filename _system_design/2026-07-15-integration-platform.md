@@ -1,10 +1,10 @@
 ---
 layout: system-design
 version: 0.1
-status: draft
+status: "draft"
 title: "Design a Integration Platform"
 Author: "Braden Townsell"
-project: AtlasFlow
+project: "AtlasFlow"
 date: 2026-07-15
 ---
 
