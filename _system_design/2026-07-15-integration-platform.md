@@ -3,7 +3,7 @@ layout: system-design
 version: 0.1
 status: draft
 title: "Design a Integration Platform"
-Author: Braden Townsell
+Author: "Braden Townsell"
 project: AtlasFlow
 date: 2026-07-15
 ---
