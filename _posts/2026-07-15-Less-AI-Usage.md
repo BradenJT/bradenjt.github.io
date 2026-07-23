@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Locking In"
+title: "Less AI Usage"
 date: 2026-07-15
 ---
 
