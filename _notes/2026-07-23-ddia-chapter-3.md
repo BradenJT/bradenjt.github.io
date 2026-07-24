@@ -1,6 +1,6 @@
 ---
 layout: note
-title: "DDIA Chapter 2 — Storage and Retrieval"
+title: "DDIA Chapter 3 — Storage and Retrieval"
 date: 2026-07-23
 source: "Designing Data-Intensive Applications — Kleppmann"
 ---
